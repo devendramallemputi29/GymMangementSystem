@@ -1,0 +1,228 @@
+/* AdminPanel.css */
+
+/* Main Container */
+.admin-container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Tab Navigation */
+.tab-container {
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  color: black;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.tab-button.active {
+  background-color: #4285f4;
+  color: white;
+}
+
+/* Form Elements */
+.form-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.form-input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  flex: 1;
+  min-width: 120px;
+}
+
+/* Buttons */
+.button {
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button-green {
+  background-color: #4CAF50;
+}
+
+.button-blue {
+  background-color: #2196F3;
+  margin-bottom: 20px;
+}
+
+.button-orange {
+  background-color: #FF9800;
+}
+
+.button-purple {
+  background-color: #9C27B0;
+}
+
+.button-red {
+  background-color: #F44336;
+}
+
+/* Members List */
+.members-list {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.member-cards {
+  list-style: none;
+  padding: 0;
+}
+
+.member-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.member-info {
+  margin-bottom: 10px;
+}
+
+.member-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.action-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Supplements Grid */
+.supplements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.supplement-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  position: relative;
+}
+
+.best-seller-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #FF9800;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.supplement-title {
+  margin: 0 0 10px 0;
+}
+
+.supplement-brand {
+  margin: 5px 0;
+  color: #666;
+}
+
+.supplement-detail {
+  margin: 5px 0;
+}
+
+.stock-status {
+  margin: 10px 0 0 0;
+  font-weight: bold;
+}
+
+.in-stock {
+  color: green;
+}
+
+.out-of-stock {
+  color: red;
+}
+
+/* Diet Plans */
+.diet-plans-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.diet-plan-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.diet-plan-title {
+  margin-top: 0;
+  color: #4285f4;
+}
+
+.meal-plan-title {
+  margin-bottom: 10px;
+}
+
+.meal-schedule {
+  margin-bottom: 15px;
+}
+
+.meal-item {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.meal-time {
+  min-width: 80px;
+  font-weight: bold;
+}
+
+.meal-description {
+  flex: 1;
+}
+
+.diet-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+  }
+  
+  .diet-details-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .supplements-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}

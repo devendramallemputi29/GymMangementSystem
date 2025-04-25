@@ -1,0 +1,403 @@
+/* Login.css */
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+/* Login page container */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 50%, #fdbb2d 100%);
+  padding: 20px;
+}
+
+/* Main login form container */
+.login-container {
+  width: 100%;
+  max-width: 700px; /* was 500px before */
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
+  padding: 60px 70px; /* more padding for desktop */
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-out;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Gym logo styling */
+.gym-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gym-logo h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #222;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+}
+
+.gym-logo span {
+  color: #e74c3c;
+  font-weight: 900;
+}
+
+.tagline {
+  color: #666;
+  font-size: 16px;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Login header */
+.login-header {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+  position: relative;
+}
+
+.login-header::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #e74c3c;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Role selector container */
+.role-selector-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  justify-content: space-between;
+}
+
+.role-selector-container label {
+  font-weight: 500;
+  color: #333;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.role-selector {
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  flex-grow: 1;
+  cursor: pointer;
+  width: 100%;
+  height: 48px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23555%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px top 50%;
+  background-size: 12px auto;
+  padding-right: 30px;
+  transition: all 0.3s ease;
+}
+
+.role-selector:focus {
+  border-color: #e74c3c;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.15);
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: #e74c3c;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.15);
+}
+
+/* Login button */
+.login-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  height: 50px;
+  box-shadow: 0 4px 6px rgba(231, 76, 60, 0.2);
+}
+
+.login-button:hover {
+  background-color: #d44637;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px rgba(231, 76, 60, 0.25);
+}
+
+.login-button:active {
+  background-color: #c0392b;
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(231, 76, 60, 0.25);
+}
+
+/* Login options */
+.login-options {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.create-account {
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.create-account:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #e74c3c;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s;
+}
+
+.create-account:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Error message */
+.error-message {
+  margin: 15px 0;
+  padding: 12px 15px;
+  background-color: #fff0f0;
+  color: #e74c3c;
+  border-radius: 6px;
+  border-left: 4px solid #e74c3c;
+  font-size: 14px;
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-2px, 0, 0); }
+  40%, 60% { transform: translate3d(2px, 0, 0); }
+}
+
+/* Motivation quote */
+.motivation-quote {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  border-left: 4px solid #e74c3c;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  position: relative;
+}
+
+.motivation-quote:before {
+  content: '"';
+  font-size: 70px;
+  position: absolute;
+  color: rgba(231, 76, 60, 0.1);
+  left: 10px;
+  top: -10px;
+  font-family: Georgia, serif;
+}
+
+.motivation-quote p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Gym features */
+.gym-features {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.gym-features h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.gym-features h3:after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #e74c3c;
+  margin: 8px auto 0;
+}
+
+.gym-features ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gym-features li {
+  width: 48%;
+  margin-bottom: 12px;
+  padding: 8px 0;
+  position: relative;
+  padding-left: 28px;
+  color: #555;
+  transition: transform 0.2s ease;
+}
+
+.gym-features li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.gym-features li:hover {
+  transform: translateX(3px);
+  color: #333;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 30px 20px;
+  }
+
+  .gym-features li {
+    width: 100%;
+  }
+
+  .gym-logo h1 {
+    font-size: 28px;
+  }
+
+  .role-selector-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .role-selector-container label {
+    margin-bottom: 8px;
+  }
+
+  .role-selector {
+    width: 100%;
+  }
+
+  .login-header {
+    font-size: 22px;
+  }
+
+  .motivation-quote {
+    padding: 15px;
+  }
+}
+
+/* Responsive styles for medium to large screens */
+@media (min-width: 768px) {
+  .login-container {
+    padding: 50px 60px;
+    max-width: 600px;
+  }
+
+  .login-header {
+    font-size: 28px;
+  }
+
+  .form-input, .role-selector {
+    height: 52px;
+    font-size: 18px;
+  }
+
+  .login-button {
+    height: 54px;
+    font-size: 18px;
+  }
+
+  .gym-logo h1 {
+    font-size: 42px;
+  }
+
+  .motivation-quote p {
+    font-size: 18px;
+  }
+}
