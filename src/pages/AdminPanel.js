@@ -10,7 +10,7 @@ import {
   doc,
 } from "firebase/firestore";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+
 import * as XLSX from "xlsx";
 import "../styles/AdminPanel.css";
 
@@ -21,7 +21,7 @@ function AdminPanel() {
   const [notification, setNotification] = useState("");
   const [feePackage, setFeePackage] = useState("");
   const [activeTab, setActiveTab] = useState("members");
-  const navigate = useNavigate();
+
 
   const supplements = [
     { 
